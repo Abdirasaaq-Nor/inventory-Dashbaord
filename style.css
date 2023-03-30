@@ -1,0 +1,592 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* .main_section {
+  margin-left: 220px;
+} */
+.dashboard_recent_updates {
+  display: flex;
+  margin: 50px 0px 0px 40px;
+}
+.dashboard_recent_updates h1 {
+  padding: 10px 10px 10px 20px;
+  font-size: 16px;
+  color: gray;
+  cursor: pointer;
+}
+
+/* ............ charts  */
+.chars_ {
+  margin-left: 34px;
+}
+#myPlot {
+  width: 80%;
+}
+/* .................................................  Dashboard  section ........................... */
+
+.Dashboard {
+  display: block;
+}
+
+.sales_and_activity {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 40px 0px 60px;
+  font-size: 12px;
+  color: gray;
+}
+.summary {
+  display: block;
+  padding-right: 160px;
+}
+
+/* ........ boxes ...... */
+.main_box {
+  display: flex;
+  margin: 10px 0px 0px 35px;
+}
+.main_child_1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.box_child_1 {
+  background-color: white;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
+  width: 150px;
+  height: 120px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.box_child_2,
+.box_child_3,
+.box_child_4 {
+  background-color: white;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
+  width: 150px;
+  height: 160px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.box_child_1 h2,
+.box_child_2 h2,
+.box_child_3 h2,
+.box_child_4 h2 {
+  padding-top: 10px;
+}
+.box_child_1 h5,
+.box_child_2 h5,
+.box_child_3 h5,
+.box_child_4 h5 {
+  padding-top: 10px;
+  color: gray;
+}
+.main_child_2 {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+.box_child_2_main {
+  background-color: white;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
+  width: 260px;
+  height: 80px;
+  margin: 4px 0px 4px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 5px 0px 5px;
+  border-radius: 10px;
+}
+.box_child_2_main h4 {
+  color: gray;
+}
+/* ......................................... top selling section ............ */
+.flex_wto {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+.main_lefside {
+  background-color: white;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
+  width: 460px;
+  height: 430px;
+  border-radius: 10px;
+}
+.left_side {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-left: 20px;
+}
+.left_side .one h4 {
+  padding: 25px 0px 30px 0px;
+  font-size: 14px;
+  color: rgb(42, 41, 41);
+  font-weight: 200px;
+}
+.left_side .one h1:nth-child(1) {
+  color: red;
+}
+.left_side .two h4:nth-child(1) {
+  color: red;
+}
+.left_side .two h4 {
+  padding: 25px 0px 30px 60px;
+  font-size: 14px;
+}
+.left_side .three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+}
+.flex_second_purchase {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 20px 0px 20px;
+}
+.flex_second_purchase h4 {
+  font-weight: 50px;
+}
+.flex_second_purchase select {
+  border: 1px solid gray;
+  outline: none;
+  width: 100px;
+  height: 30px;
+}
+.flex_second_purchase select:focus {
+  border: 1px solid rgb(142, 250, 142);
+}
+.quantity {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0px 0px 0px;
+}
+.quantit_line {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  height: 60px;
+}
+.quantit_1 {
+  text-align: center;
+}
+.quantit_1 h5 {
+  padding-top: 10px;
+  color: blue;
+}
+.quantit_1,
+.quantit_2 h4 {
+  color: gray;
+}
+.quantit_2 {
+  text-align: center;
+}
+.quantit_2 h5 {
+  padding-top: 10px;
+  color: blue;
+}
+/* ...............................  underline....................*/
+.underline {
+  border-bottom: 1px solid gray;
+  display: flex;
+  margin: 1px 30px 0px 30px;
+}
+/* ..................... top selling right section ......... */
+.right_side {
+  background-color: white;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
+  width: 500px;
+  height: 360px;
+  margin-left: 20px;
+  border-radius: 10px;
+}
+.Selling_top_product {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 0px 10px;
+}
+.selling_product h3 {
+  font-weight: 300px;
+  color: rgb(46, 45, 45);
+}
+.this_year_2 select {
+  border: 1px solid gray;
+  outline: none;
+  width: 100px;
+  height: 30px;
+}
+
+.this_year_2 select:focus {
+  border: 1px solid rgb(142, 250, 142);
+}
+/* .................. desing table section  */
+.border_bottom {
+  border-bottom: 1px solid gray;
+  display: flex;
+  margin: 10px 10px 0px 10px;
+}
+table td {
+  box-sizing: border-box;
+  padding: 10px 20px 0 20px;
+}
+
+table th {
+  padding: 10px 20px 0px 20px;
+}
+th:nth-child(3) {
+  padding-left: 50px;
+}
+
+.td_btn {
+  background-color: orange;
+  color: white;
+  outline: none;
+  width: 100px;
+  height: 20px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
+}
+.td_btn_2 {
+  background-color: blue;
+  color: white;
+  outline: none;
+  width: 80px;
+  height: 20px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
+}
+.td_btn_3 {
+  background-color: red;
+  color: white;
+  outline: none;
+  width: 100px;
+  height: 20px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
+}
+.icon_color {
+  color: blue;
+}
+/* table th:nth-child(2){
+        padding-left: 70px;
+        color: red;
+} */
+.product_name {
+  display: flex;
+  flex-direction: row;
+}
+.product_name img {
+  width: 40px;
+  height: 40px;
+}
+/* ................................................ .............Recent updates section .......................... */
+.recent_updates {
+  margin-left: 240px;
+  background-color: white;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
+  width: 700px;
+  display: none;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+/* .......................... desingin time line or recent updates....... */
+
+/* (A) TIMELINE CONTAINER */
+.vtl {
+  /* (A1) RELATIVE POSITION REQUIRED TO PROPERLY POSITION THE TIMELINE */
+  position: relative;
+
+  /* (A2) RESERVE MORE SPACE TO THE LEFT FOR THE TIMELINE */
+  padding: 10px 10px 10px 50px;
+
+  /* (A3) OPTIONAL WIDTH RESTRICTION */
+  max-width: 400px;
+}
+.vtl,
+.vtl * {
+  box-sizing: border-box;
+}
+
+/* (B) DRAW VERTICAL LINE USING ::BEFORE */
+.vtl::before {
+  /* (B1) VERTICAL LINE */
+  content: "";
+  width: 5px;
+  background-color: rgb(167, 167, 167);
+
+  /* (B2) POSITION TO THE LEFT */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+}
+
+/* (C) COSMETICS FOR EVENTS */
+div.event {
+  padding: 20px 30px;
+
+  position: relative;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* (D) COSMETICS FOR EVENT DATE & TEXT */
+p.date {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: rgb(171, 170, 170);
+  font-size: 14px;
+}
+p.txt {
+  margin: 10px 0 0 0;
+  color: #222;
+}
+
+/* (E) EVENT "SPEECH BUBBLE CALLOUT" */
+div.event::before {
+  /* (E1) "MAGIC TRIANGLE" */
+
+  /* (E2) POSITION TO THE LEFT */
+  position: absolute;
+  top: 20%;
+  left: -10px;
+}
+.txt {
+  color: rgb(56, 56, 56);
+  margin-top: 10px;
+}
+.lorem_ {
+  width: 150%;
+  margin-top: 10px;
+}
+div.event::after {
+  content: "";
+  background: #fff;
+  border: 4px solid gray;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+
+  /* (F2) POSITION TO THE LEFT */
+  position: absolute;
+  top: 20%;
+  left: -44px;
+}
+
+/* .......................................... ................................................media query for mobile ............... */
+@media only screen and (max-width: 600px) {
+  .main_section {
+    margin-left: 1px;
+  }
+  .dashboard_recent_updates {
+    display: flex;
+    margin: 50px 0px 0px 20px;
+  }
+
+  .sales_and_activity {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 40px 0px 40px;
+  }
+  .summary {
+    display: block;
+    padding-right: 10px;
+  }
+  /* ......................... boxes desing ....... */
+  .main_box {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px 0px 35px;
+  }
+  .main_child_1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .box_child_2,
+  .box_child_3,
+  .box_child_4 {
+    background-color: white;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
+    width: 400px;
+    height: 150px;
+  }
+  .box_child_1 {
+    width: 400px;
+    height: 150px;
+  }
+  .box_child_2_main {
+    background-color: white;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
+    width: 400px;
+    height: 80px;
+    margin-left: 10px;
+  }
+
+  .flex_wto {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+  .main_lefside {
+    width: 420px;
+    height: 590px;
+  }
+
+  .left_side {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 20px;
+
+    /* height: 700px; */
+    /* background-color: yellow; */
+  }
+  .right_side {
+    width: 440px;
+    margin-left: 0px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-top: 30px;
+    height: 400px;
+  }
+  .underline {
+    display: none;
+  }
+  .recent_updates {
+    margin-left: 30px;
+    background-color: white;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
+    width: 400px;
+    display: none;
+  }
+  .lorem_ {
+    width: 80%;
+  }
+  #myPlot {
+    width: 60%;
+  }
+}
+
+/* ................................................................ media query for tablet ........ */
+@media (min-width: 600px) and (max-width: 1024px) {
+  /* body{
+                background-color: yellow;
+        } */
+  .main_section {
+    margin-left: 1px;
+  }
+
+  /* ............................. boxes setion */
+  .main_box {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px 0px 35px;
+  }
+  .flex_wto {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .main_child_1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .box_child_2_main {
+    background-color: white;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
+    width: 200px;
+    height: 160px;
+    margin-left: 10px;
+  }
+  .box_child_1 {
+    background-color: white;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
+    width: 200px;
+    height: 160px;
+  }
+  .h1_tablet {
+    width: 70%;
+  }
+  .right_side {
+    width: 500px;
+    height: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow-x: scroll;
+  }
+  table th {
+    padding: 10px 10px 0px 10px;
+  }
+  th:nth-child(3) {
+    padding-left: 20px;
+  }
+  .main_lefside {
+    width: 370px;
+    height: 470px;
+  }
+
+  .this_year_2 {
+    margin-left: 40px;
+  }
+  table th {
+    padding: 10px 30px 0px 30px;
+  }
+  .border_bottom {
+    border-bottom: 1px solid gray;
+    display: flex;
+    margin: 10px 10px 0px 10px;
+    width: 500px;
+  }
+  .recent_updates {
+    margin-left: 30px;
+    background-color: white;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
+    width: 600px;
+  }
+  .lorem_ {
+    width: 120%;
+  }
+  #myPlot {
+    width: 100%;
+  }
+}
+
+/* .......................................... media quary ............... */
+@media (min-width: 600px) and (max-width: 927px) {
+  .main_box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 30px 0px 0px 40px;
+  }
+  .table_up {
+    position: relative;
+    right: 90%;
+  }
+  .box_5 {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+  }
+  .box_5_1,
+  .box_5_2 {
+    width: 300px;
+    height: 60px;
+    margin: 10px;
+  }
+}

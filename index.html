@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- ...... inventory management css -->
+    <!-- <link rel="stylesheet" href="./app/css/inventory.css" /> -->
+    <!-- .................. font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- ..... material icon inventory managment -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- ............... inventory chars cdn -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <!-- chart cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  </head>
+  <body>
+    <!-- .......................................... inventory managament ................ -->
+    <!-- ........................................... Hero section... .................. -->
+    <section class="main_section">
+      <!-- .............. Dashboard and Recent updates.......... -->
+      <div class="dashboard_recent_updates">
+        <h1 id="dashboard_onclick">Dashboard</h1>
+        <h1 class="h1_" id="recent_onclick">Recent updates</h1>
+      </div>
+
+      <!-- ......................... Dashboard  section  ................  -->
+
+      <div class="Dashboard" id="Dashboard">
+        <!-- ........ sales_and_activity  and inventory summary...... -->
+        <div class="sales_and_activity">
+          <div><h1>Sales activity</h1></div>
+          <div class="summary"><h1>Inventory Summary</h1></div>
+        </div>
+
+        <!-- ....... boxes ..... -->
+        <div class="main_box">
+          <div class="main_child_1">
+            <!-- ...... consist 4 rows    -->
+            <div class="box_child_1">
+              <span><i class="fa fa-bars"></i></span>
+              <h2>23,455</h2>
+              <h5>TO BE PACKED</h5>
+            </div>
+            <div class="box_child_2">
+              <span><i class="fa fa-facebook"></i></span>
+              <h2>30,444</h2>
+              <h5>
+                TO BE <br />
+                SHIPPED
+              </h5>
+            </div>
+            <div class="box_child_3">
+              <span><i class="fa fa-instagram"></i></span>
+              <h2>12,333</h2>
+              <h5>
+                TO BE <br />
+                DELIVRED
+              </h5>
+            </div>
+            <div class="box_child_4">
+              <span><i class="fa fa-youtube"></i></span>
+              <h2>30,555</h2>
+              <h5>
+                TO BE <br />
+                INVOICED
+              </h5>
+            </div>
+          </div>
+
+          <div class="main_child_2">
+            <!-- .......... consist 2 rows -->
+            <div class="box_child_2_main">
+              <h4>Quantity Hand</h4>
+              <p>455</p>
+            </div>
+            <div class="box_child_2_main">
+              <h4 class="h1_tablet">Quantity To be recieved</h4>
+              <p>120</p>
+            </div>
+          </div>
+        </div>
+        <!-- ................. ddd -->
+
+        <div class="flex_wto">
+          <!-- .................. leftside -->
+          <div class="main_lefside">
+            <div class="left_side">
+              <div class="one">
+                <h4>Stockout items</h4>
+                <h4>Lock stock items</h4>
+                <h4>Availible items</h4>
+              </div>
+              <div class="two">
+                <h4>322</h4>
+                <h4>122</h4>
+                <h4>441</h4>
+              </div>
+              <div class="three">
+                <canvas
+                  id="myChart"
+                  style="width: 80%; max-width: 500px"
+                ></canvas>
+                <script>
+                  var xValues = ["out of stock", "low stock"];
+                  var yValues = [44, 24, 15];
+                  var barColors = ["blue", "orange", "red"];
+                  var fontsize = ["12px"];
+
+                  new Chart("myChart", {
+                    type: "doughnut",
+                    data: {
+                      labels: xValues,
+                      datasets: [
+                        {
+                          backgroundColor: barColors,
+                          fontsize: fontsize,
+                          data: yValues,
+                        },
+                      ],
+                    },
+                    options: {
+                      title: {
+                        display: false,
+                        text: "World Wide Wine Production 2018",
+                      },
+                    },
+                  });
+                </script>
+              </div>
+            </div>
+            <span class="underline">.</span>
+            <div class="flex_second_purchase">
+              <div class="purchase_order">
+                <h4>Purchase order</h4>
+              </div>
+              <div class="this_year">
+                <select name="" id="">
+                  <option value="">This year</option>
+                  <option value="">Last year</option>
+                </select>
+              </div>
+            </div>
+            <div class="quantity">
+              <div class="quantit_1">
+                <h4>Quantity Ordered</h4>
+                <h5>444</h5>
+              </div>
+              <span class="quantit_line"></span>
+              <div class="quantit_2">
+                <h4>Total cost</h4>
+                <h5>$44,454</h5>
+              </div>
+            </div>
+          </div>
+          <!-- ............ right side  -->
+          <div class="right_side">
+            <div class="Selling_top_product">
+              <div class="selling_product"><h3>Top selling product</h3></div>
+              <div class="this_year_2">
+                <select name="" id="">
+                  <option value="">This year</option>
+                  <option value="">Last year</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- ........ desing selling product table.. -->
+
+            <div class="div_table">
+              <table>
+                <tr>
+                  <th>Name</th>
+                  <th></th>
+                  <th>Revenue</th>
+                  <th>Stock status</th>
+                  <th>Action</th>
+                </tr>
+              </table>
+              <span class="border_bottom"></span>
+              <table>
+                <!-- .......... TD one  -->
+                <tr>
+                  <td>
+                    <div class="product_name">
+                      <img src="./images/image_1.png" alt="" />
+                    </div>
+                  </td>
+                  <td>
+                    <div><h5>Airphone</h5></div>
+                  </td>
+                  <td>$100</td>
+                  <td><button class="td_btn">15 availbe</button></td>
+                  <td class="icon_color">
+                    <span
+                      class="material-icons notranslate MuiIcon-root MuiIcon-colorPrimary MuiIcon-fontSizeMedium css-21f8pw"
+                      aria-hidden="true"
+                      >edit</span
+                    >
+                  </td>
+                </tr>
+
+                <!-- ....... td two -->
+                <tr>
+                  <td>
+                    <div class="product_name">
+                      <img src="./images/image_3.png" alt="" />
+                    </div>
+                  </td>
+                  <td>
+                    <div><h5>Airphone</h5></div>
+                  </td>
+                  <td>$1.5k</td>
+                  <td><button class="td_btn_2">In stock</button></td>
+                  <td class="icon_color">
+                    <span
+                      class="material-icons notranslate MuiIcon-root MuiIcon-colorPrimary MuiIcon-fontSizeMedium css-21f8pw"
+                      aria-hidden="true"
+                      >edit</span
+                    >
+                  </td>
+                </tr>
+
+                <!-- ....... td three -->
+                <tr>
+                  <td>
+                    <div class="product_name">
+                      <img src="./images/image_2.png" alt="" />
+                    </div>
+                  </td>
+                  <td>
+                    <div><h5>Airphone</h5></div>
+                  </td>
+                  <td>$2.1k</td>
+                  <td><button class="td_btn_2">In stock</button></td>
+                  <td class="icon_color">
+                    <span
+                      class="material-icons notranslate MuiIcon-root MuiIcon-colorPrimary MuiIcon-fontSizeMedium css-21f8pw"
+                      aria-hidden="true"
+                      >edit</span
+                    >
+                  </td>
+                </tr>
+
+                <!-- ....... td four -->
+                <tr>
+                  <td>
+                    <div class="product_name">
+                      <img src="./images/image_3.png" alt="" />
+                    </div>
+                  </td>
+                  <td>
+                    <div><h5>Airphone</h5></div>
+                  </td>
+                  <td>$100</td>
+                  <td><button class="td_btn_3">Out of stock</button></td>
+                  <td class="icon_color">
+                    <span
+                      class="material-icons notranslate MuiIcon-root MuiIcon-colorPrimary MuiIcon-fontSizeMedium css-21f8pw"
+                      aria-hidden="true"
+                      >edit</span
+                    >
+                  </td>
+                </tr>
+                <!-- .......... TD five  -->
+                <tr>
+                  <td>
+                    <div class="product_name">
+                      <img src="./images/image_1.png" alt="" />
+                    </div>
+                  </td>
+                  <td>
+                    <div><h5>Airphone</h5></div>
+                  </td>
+                  <td>$1.2k</td>
+                  <td><button class="td_btn">5 availbe</button></td>
+                  <td class="icon_color">
+                    <span
+                      class="material-icons notranslate MuiIcon-root MuiIcon-colorPrimary MuiIcon-fontSizeMedium css-21f8pw"
+                      aria-hidden="true"
+                      >edit</span
+                    >
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- ................ charts........... -->
+        <!-- myplot style="width: 100%; max-width: 900px" -->
+        <div class="chars_">
+          <div id="myPlot" style="width: 100%; max-width: 900px">
+            <script>
+              var xArray = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
+              var yArray = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
+
+              // Define Data
+              var data = [
+                {
+                  x: xArray,
+                  y: yArray,
+                  mode: "markers",
+                },
+              ];
+
+              // Define Layout
+              var layout = {
+                xaxis: { range: [40, 160], title: "Square Meters" },
+                yaxis: { range: [5, 16], title: "Price in Millions" },
+                title: "House Prices vs. Size",
+              };
+
+              // Display using Plotly
+              Plotly.newPlot("myPlot", data, layout);
+            </script>
+
+            <!-- ............. charts end -->
+          </div>
+        </div>
+      </div>
+
+      <!-- .........................         Recent Updates   section  .................. -->
+      <div class="recent_updates" id="recent_updates">
+        <!-- ............. time line  -->
+
+        <div class="vtl">
+          <div class="event">
+            <p class="date">11 Mar 2237 12:34</p>
+            <h3 class="txt">What is lorem.</h3>
+            <p class="lorem_">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+              vel excepturi unde dolor modi earum sint, odio et perferendis
+              reprehenderit, accusantium illo fuga distinctio nesciunt sit?
+              Sint, ea. Commodi, ea.
+            </p>
+          </div>
+          <div class="event">
+            <p class="date">12 Mar 2237 14:23</p>
+            <h3 class="txt">What is lorem.</h3>
+            <p class="lorem_">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+              vel excepturi unde dolor modi earum sint, odio et perferendis
+              reprehenderit, accusantium illo fuga distinctio nesciunt sit?
+              Sint, ea. Commodi, ea.
+            </p>
+          </div>
+          <div class="event">
+            <p class="date">13 Mar 2237 20:12</p>
+            <h3 class="txt">What is lorem.</h3>
+            <p class="lorem_">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+              vel excepturi unde dolor modi earum sint, odio et perferendis
+              reprehenderit, accusantium illo fuga distinctio nesciunt sit?
+              Sint, ea. Commodi, ea.
+            </p>
+          </div>
+          <div class="event">
+            <p class="date">14 Mar 2237 08:11</p>
+            <h3 class="txt">What is lorem.</h3>
+            <p class="lorem_">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+              vel excepturi unde dolor modi earum sint, odio et perferendis
+              reprehenderit, accusantium illo fuga distinctio nesciunt sit?
+              Sint, ea. Commodi, ea.
+            </p>
+          </div>
+          <div class="event">
+            <p class="date">15 Mar 2237 14:27</p>
+            <h3 class="txt">What is lorem.</h3>
+            <p class="lorem_">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+              vel excepturi unde dolor modi earum sint, odio et perferendis
+              reprehenderit, accusantium illo fuga distinctio nesciunt sit?
+              Sint, ea. Commodi, ea.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="main.js"></script>
+    <!-- ............. inventroy managemnt js.. -->
+    <!-- <script src="./app/js/Inventry.js"></script> -->
+    <script defer src="./app/js/Header.js"></script>
+    <script src="./app/js/DropDown.js"></script>
+    <script src="./app/js/Charts.js"></script>
+  </body>
+</html>
